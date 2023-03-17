@@ -1,0 +1,20 @@
+#Korpa
+1. Dodati proizvoljno dva proizvoda u korpu. Kolicina jednog od proizvoda treba da bude minimum 2
+2. Verifikovati da broj proizvoda u korpi odgovara broju u crvenom balonu na ikonici korpe
+3. Verifikovati da se Total cena poklapa sa cena * kolicina za sve proizvode u korpi
+4. Zavrsiti kupovinu proizvoda, platiti proizvode i verifikovati uspesnost kupovine
+
+#Login
+1. Uraditi negativne testove za login. Jedan test treba da procita sve kredencijale preko dataProvidera
+
+#Kategorije
+1. Iz header-menu izabrati kategoriju Power Tools
+2. Odabrati check-box Drill
+3. Verifikovati da je broj proizvoda na stranici manji od broja proizvoda pre filtriranja
+
+#Wish-lista
+1. Dodati proizvod u wish-listu
+2. Verifikovati u profilu korisnika na stranici Favorites da je proizvod dodat. Verifikaciju izvrsiti po imenu proizvoda
+
+#Git
+Upload-ovati projekat na Github i poslati link do projekta

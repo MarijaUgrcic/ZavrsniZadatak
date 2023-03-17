@@ -19,20 +19,18 @@ public class Utils {
                 .load();
     }
 
-    @DataProvider(name = "dpLoginTestUsernameInvalid")
-    public static Object[][] dpLoginTestUsernameInvalid() {
+    @DataProvider(name = "dpLoginTestNegativeCases")
+    public static Object[][] dpLoginTestNegativeCases() {
         return new Object[][]{
-                {"nekimail", "123456"},
-                {"nekimail@", "Password"},
-                {"@com", "Password"},
+                {"", ""},
+                {"", "Password"},
+                {"mail@mail.com", ""},
+                {"mail@mail.com", "P"},
+                {"nekimail", "Password"},
+                {"mail", "P"},
+                {"", "P"},
+                {"nekimail", ""},
         };
     }
 
-    @DataProvider(name = "dpLoginTestPasswordInvalid")
-    public static Object[][] dpLoginTestPasswordInvalid() {
-        return new Object[][]{
-                {"nekimail@gmail.com", "1"},
-                {"mail@mail.com", "@/"},
-        };
-    }
 }

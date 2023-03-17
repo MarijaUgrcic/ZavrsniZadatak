@@ -21,30 +21,11 @@ public class LoginTest extends BaseTest {
     @Description("Negative cases Login test: Expected result - Error message is shown")
     @Epic("Negative cases Login test epic")
     @Story("Negative cases Login test story")
-    @Test
-    public void loginTestNegativeCaseUsernameBlankPasswordBlank() {
-        loginPage.goToLoginForm()
-                .loginUser("", "");
-        Assert.assertTrue(loginPage.loginNegativeCaseUsernameBlankPasswordBlank());
-    }
-
-    @Description("Negative cases Login test: Expected result - Error message is shown")
-    @Epic("Negative cases Login test epic")
-    @Story("Negative cases Login test story")
-    @Test(dataProvider = "dpLoginTestUsernameInvalid", dataProviderClass = Utils.class)
-    public void loginTestNegativeCaseUsernameInvalidPasswordValid(String username, String password) {
+    @Test(dataProvider = "dpLoginTestNegativeCases", dataProviderClass = Utils.class)
+    public void loginNegative(String username, String password) {
         loginPage.goToLoginForm()
                 .loginUser(username, password);
-        Assert.assertTrue(loginPage.loginNegativeCaseUsernameInvalidPasswordValid());
+        Assert.assertTrue(loginPage.loginNegativeCases());
     }
 
-    @Description("Negative cases Login test: Expected result - Error message is shown")
-    @Epic("Negative cases Login test epic")
-    @Story("Negative cases Login test story")
-    @Test(dataProvider = "dpLoginTestPasswordInvalid", dataProviderClass = Utils.class)
-    public void loginTestNegativeCaseUsernameValidPasswordInvalid(String username, String password) {
-        loginPage.goToLoginForm()
-                .loginUser(username, password);
-        Assert.assertTrue(loginPage.loginNegativeCaseUsernameValidPasswordInvalid());
-    }
 }
